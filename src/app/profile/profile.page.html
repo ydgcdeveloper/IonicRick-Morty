@@ -21,14 +21,16 @@
               <p>{{character.status}}</p>
               <p>{{character.species}}</p>
               <ion-label color="secondary">{{character.type}}</ion-label>
-              Gender:
-              <div *ngIf="character.gender === 'Male'; then thenBlock else elseBlock"></div>
-              <ng-template #thenBlock>
-                <ion-icon name="male"></ion-icon>
-              </ng-template>
-              <ng-template #elseBlock>
-                <ion-icon name="female"></ion-icon>
-              </ng-template>
+              <div>
+                Gender:
+                <div *ngIf="character.gender === 'Male'; then thenBlock else elseBlock"></div>
+                <ng-template #thenBlock>
+                  <ion-icon name="male"></ion-icon>
+                </ng-template>
+                <ng-template #elseBlock>
+                  <ion-icon name="female"></ion-icon>
+                </ng-template>
+              </div>
             </ion-card-content>
           </ion-card>
         </div>
