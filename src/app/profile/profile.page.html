@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="characters"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeMd="4" offsetMd="4">
+        <div *ngIf="character">
+          <ion-card>
+            <ion-card-content class="ion-text-center">
+              <img src="{{character.image}}">
+              <ion-card-title>
+                {{character.name}}
+              </ion-card-title>
+              <p>{{character.status}}</p>
+              <p>{{character.species}}</p>
+              <ion-label color="secondary">{{character.type}}</ion-label>
+              Gender:
+              <div *ngIf="character.gender === 'Male'; then thenBlock else elseBlock"></div>
+              <ng-template #thenBlock>
+                <ion-icon name="male"></ion-icon>
+              </ng-template>
+              <ng-template #elseBlock>
+                <ion-icon name="female"></ion-icon>
+              </ng-template>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
