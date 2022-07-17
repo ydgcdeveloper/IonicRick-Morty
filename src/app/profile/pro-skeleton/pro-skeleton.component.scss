@@ -1,0 +1,14 @@
+div {
+
+  ion-skeleton-text {
+    line-height: 12px;
+    margin: auto;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    border-radius: 25px;
+  }
+
+  ion-skeleton-text:first-child{
+    line-height: 25px;
+  }
+}
