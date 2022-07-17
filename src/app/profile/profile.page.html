@@ -11,6 +11,7 @@
   <ion-grid>
     <ion-row>
       <ion-col sizeMd="4" offsetMd="4">
+        <app-pro-skeleton *ngIf="!character"></app-pro-skeleton>
         <div *ngIf="character">
           <ion-card>
             <ion-card-content class="ion-text-center">
